@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" ng-app='myApp'>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <script src="libs/angular.js"></script>
-    <script>
-      var app = angular.module('myApp', []);
-      app.run(function(){
-        console.log('Esto es una prueba');
-      });
-    </script>
+    <title>Hola en AngularJS</title>
   </head>
   <body>
 
-    <input type="text" ng-model="nombre"></input>
-    <br/>
-    mi nombre es: {{nombre}} :D
+  <div id="app1" ng-app="myApp" ng-controller="MyController">
+    {{nameApp}}
+  </div>
 
+  <div id="app2" ng-app="myOtherApp" ng-controller="MyOtherController">
+    {{nameApp}}
+  </div>
 
+  <script src="libs/angular.js"></script>
+  <script>
+    var app = angular.module('myApp', []);
+    //console.log('primera Aplicacion');
+    app.controller('MyController', ['$scope', function($scope){
+      $scope.nameApp = "Hola, Primera Aplicacion"
+    }])
+
+    var app2 = angular.module('myOtherApp', []);
+    //console.log('segunda Aplicacion')
+    app2.controller('MyOtherController', ['$scope', function($scope){
+      $scope.nameApp = "Hola, Segundo Controlador"
+    }])
+
+    angular.bootstrap(document.getElementById("app2"), ['myOtherApp']);
+  </script>
 
   </body>
 </html>

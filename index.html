@@ -2,19 +2,18 @@
 <html lang="en" dir="ltr" ng-app="myApp">
   <head>
     <meta charset="utf-8">
-    <title>Hola en AngularJS</title>
+    <title>Controladores</title>
   </head>
-  <body>
+  <body ng-controller="UsuarioController">
 
-  <div ng-init="usuario.nombre = 'Lya' ">
-    El nombre de usuario es: {{usuario.nombre}}
-  </div>
-
-  {{usuario.nombre}}
+  El nombre de usuario es: {{nombre}}
 
   <script src="libs/angular.js"></script>
   <script>
     var app = angular.module('myApp', []);
+    app.controller('UsuarioController', ['$scope', function($scope){
+      $scope.nombre="Lya";
+    }])
   </script>
 
   </body>

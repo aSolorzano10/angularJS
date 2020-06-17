@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <title>Controladores Paralelos</title>
   </head>
-  <body ng-controller="TestController as test">
+  <body ng-controller="UsuarioController as usuario">
+    Introduce el t&iacute;tulo
+    <input type="text" ng-model="usuario.titulo">
 
-    {{test.titulo}}
+    {{usuario.titulo}}
 
     <script src="libs/angular.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/controllers/test.controllers.js"></script>
+    <script src="js/controllers/usuario.controller.js"></script>
   </body>
 </html>

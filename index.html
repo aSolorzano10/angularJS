@@ -7,10 +7,12 @@
   <body>
 
   <div ng-controller="UsuarioPadreController as padre">
-    el nombre de usuario es: {{padre.nombre}}
+    El nombre de usuario es: {{padre.nombre}}
 
     <div ng-controller="UsuarioHijoController as hijo">
-      el nombre de usuario es: {{hijo.nombre}}
+      El nombre de usuario es: {{hijo.nombre}}
+      <br/>
+      Accediendo a los datos del padre: {{padre.nombre}};
     </div>
   </div>
 

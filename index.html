@@ -6,11 +6,11 @@
   </head>
   <body>
 
-  <div ng-controller="UsuarioPadreController">
-    el nombre de usuario es: {{nombre}}
+  <div ng-controller="UsuarioPadreController as padre">
+    el nombre de usuario es: {{padre.nombre}}
 
-    <div ng-controller="UsuarioHijoController">
-      el nombre de usuario es: {{nombre}}
+    <div ng-controller="UsuarioHijoController as hijo">
+      el nombre de usuario es: {{hijo.nombre}}
     </div>
   </div>
 
@@ -21,15 +21,17 @@
 
     var app = angular.module('myApp', []);
 
-    app.controller('UsuarioPadreController', ['$scope', UsuarioPadreController]);
+    app.controller('UsuarioPadreController',  UsuarioPadreController);
     function UsuarioPadreController($scope){
-      $scope.nombre = "Lya Padre";
+      var vm = this;
+      vm.nombre = "Lya padre";
     }
 
 
-    app.controller('UsuarioHijoController', ['$scope', UsuarioHijoController]);
+    app.controller('UsuarioHijoController', UsuarioHijoController);
     function UsuarioHijoController($scope){
-      $scope.nombre =  "Lya Hijo";
+      var vm = this;
+      vm.nombre = "Hijo Lya";
     }
 
   </script>

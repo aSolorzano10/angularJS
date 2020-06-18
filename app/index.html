@@ -5,10 +5,57 @@
     <title>Controladores Paralelos</title>
   </head>
   <body ng-controller="UsuarioController as usuario">
-    Introduce el t&iacute;tulo
+    Introduce el t&iacute;tulo --> Text:
     <input type="text" ng-model="usuario.titulo">
-
     {{usuario.titulo}}
+
+    <br/>checkbox:
+    <input type="checkbox" ng-model="usuario.check">
+    {{usuario.check}}
+
+    <br/> Radio:
+    <input type="radio" ng-model="usuario.radio">
+    {{usuario.radio}}
+
+    <br/> Number:
+    <input type="number" ng-model="usuario.number">
+    {{usuario.number}}
+
+    <br/> Email:
+    <input type="email" ng-model="usuario.email">
+    {{usuario.email}}
+
+    <br/> Url:
+    <input type="url" ng-model="usaurio.url">
+    {{usuario.url}}
+
+    <br/>Date:
+    <input type="date" ng-model="usuario.date">
+    {{usaurio.date}}
+
+    <br/>DateTime:
+    <input type="datetime-local" ng-model="usuario.datetime" >
+    {{usuario.datetime}}
+
+    <br/>Time:
+    <input type="time" ng-model="usuario.time">
+    {{usuario.time}}
+
+    <br/>Month:
+    <input type="month" ng-model="usuario.month">
+    {{usuario.month}}
+
+    <br/>Week:
+    <input type="week" ng-model="usuario.week">
+    {{usaurio.week}}
+
+    <br/>Select:
+    <input type="select" ng-model="usuario.select">
+    {{usuario.select}}
+
+    <br/>TextArea:
+    <input type="textarea" ng-model="usuario.textarea">
+    {{usaurio.textarea}}
 
     <script src="libs/angular.js"></script>
     <script src="js/app.js"></script>

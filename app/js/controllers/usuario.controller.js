@@ -1,5 +1,7 @@
-app.controller('UsuarioController', ['$scope', UsuarioController]);
+app.controller('UsuarioController', UsuarioController);
 
-function UsuarioController($scope){
+UsuarioController.$inject = ['$scope', '$location', '$filter']
+
+function UsuarioController($scope, $location, $filter){
   $scope.titulo = "";
 }

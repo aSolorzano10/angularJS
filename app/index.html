@@ -7,17 +7,17 @@
   <body ng-controller="UsuarioController as usuario">
 
   <!--
-      la dirctiva ng-show nos permte mostrar y ocultar elementos del DOM
-    de acuerdo a una expresión dada en el atributo ng-show.
+      la dirctiva ng-hide nos permte mostrar y ocultar elementos del DOM
+    de acuerdo a una expresión dada en el atributo ng-hide.
 
-    Muestra el contenido si la condición del ng-show es verdadera
+    Muestra el contenido si la condición del ng-hide es falso.
   -->
 
-    <div ng-show="usuario.edad > 50">
+    <div ng-hide="usuario.edad > 50">
       <p>El usuaio cuenta con beneficios...</p>
     </div>
 
-    <div ng-show="usuario.edad < 50">
+    <div ng-hide="usuario.edad < 50">
       <p>El usuario no cuenta con beneficios...</p>
     </div>
 

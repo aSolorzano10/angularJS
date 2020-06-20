@@ -1,6 +1,5 @@
-app.controller('UsuarioController', UsuarioController);
+app.controller('UsuarioController', ['$scope', UsuarioController]);
 
-function UsuarioController(){
-  var vm = this;
-  vm.titulo = "";
+function UsuarioController($scope){
+  $scope.titulo = "";
 }

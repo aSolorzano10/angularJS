@@ -7,18 +7,24 @@
   <body ng-controller="UsuarioController as usuario">
 
   <!--
-      la dirctiva ng-hide nos permte mostrar y ocultar elementos del DOM
-    de acuerdo a una expresión dada en el atributo ng-hide.
+      la dirctiva ng-if elimina o recrea una parte del árbol DOM
+      basado en una expresiòn.
 
-    Muestra el contenido si la condición del ng-hide es falso.
+      Si la expresión asignada es evaluada como false entonces el elemnto es eliminado del DOM.
+
+      Si la expresión asignada es evaluada como verdadero se crea un clon del elemento y es
+      reinsertado en el árbol del DOM.
+
+      Muestra el contenido si la condición del ng-hide es falso.
   -->
 
-    <div ng-hide="usuario.edad > 50">
-      <p>El usuaio cuenta con beneficios...</p>
-    </div>
+    Click me: <input type="checkbox" ng-model="usuario.checked">
+    <br/>
 
-    <div ng-hide="usuario.edad < 50">
-      <p>El usuario no cuenta con beneficios...</p>
+    El valor de checked es: {{usuario.checked}}
+
+    <div ng-if="usuario.checked">
+      <p>Este elemento es eliminado cuando el checkbox no este comprobado (unchecked)...</p>    
     </div>
 
     <script src="libs/angular.js"></script>

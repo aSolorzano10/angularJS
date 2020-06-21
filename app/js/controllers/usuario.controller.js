@@ -1,6 +1,7 @@
 app.controller('UsuarioController', UsuarioController);
 
-function UsuarioController(){
-  var vm = this;
-  vm.checked = true;
+UsuarioController.$inject=["$scope"]
+
+function UsuarioController($scope){
+  $scope.name='MiNombre';
 }

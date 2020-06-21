@@ -2,28 +2,21 @@
 <html lang="en" dir="ltr" ng-app="myApp" ng-strict-di>
   <head>
     <meta charset="utf-8">
-    <title>Usando ng-style</title>
+    <title>Usando ngBind</title>
     <link rel="stylesheet" type:="text/css" href="assets/app.css">
   </head>
-  <body ng-controller="UsuarioController as usuario">
+  <body ng-controller="UsuarioController">
 
   <!--
-      la dirctiva ng-style: Evalúa la expresión el cual tendrá un objeto donde
-      la key o cave son los nombre de estulo CSS y los valores corespondientes
-      a esos estilos CSS.
+      la dirctiva ng-bind: Es preferible usar la directiva ngBind en lugar de la expresion
+      {{expresion}}
   -->
 
-    <h1 ng-style="myStyle">Test de ngStyle</h1>
+    <label>Mi nombre es: <input type="text" ng-model="name">
+    </label>
 
-    <input type="button" value="color" ng-click="myStyle={color:'red'}">
-
-    <input type="button" value="fuente" ng-click="myStyle={'font-size':'52px'}">
-
-    <input type="button" value="reiniciar" ng-click="myStyle={}">
-
-    <br/>
-
-    <pre>El valor de mi objecto es: myStyle={{myStyle}}</pre>
+    <br>1.- Hola, <span ng-bind="name"></span>!
+    <br>2.- Hola, <span>{{name}}</span>
 
     <script src="libs/angular.js"></script>
     <script src="js/app.js"></script>

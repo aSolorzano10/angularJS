@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" ng-app="myApp" ng-strict-di>
   <head>
     <meta charset="utf-8">
-    <title>Usando ng-class mediante un Objeto</title>
+    <title>Usando ng-class mediante un Array</title>
     <link rel="stylesheet" type:="text/css" href="assets/app.css">
   </head>
   <body ng-controller="UsuarioController as usuario">
@@ -15,20 +15,17 @@
   -->
 
     <h1>Usando la sintaxis Object</h1>
-    <input type="checkbox" ng-model="deleted">
-      deleted is ({{deleted}}) (aplicamos a clase CSS "strike")
+    <input type="text" ng-model="style1" placeholder="Escribe: bold, strike or green">
     <br/>
 
-    <input type="checkbox" ng-model="important">
-      important is ({{important}}) (aplicamos la clase CSS "bold")
+    <input type="text" ng-model="style2" placeholder="Escribe: bold, strike or green">
     <br/>
 
-    <input type="checkbox" ng-model="error">
-      error is ({{error}}) (aplicamos la clase CSS "has-error")
+    <input type="text" ng-model="style3" placeholder="Escribe: bold, strike or green">
     <br/>
 
-    <p ng-class="{strike: deleted, bold:important, 'has-error':error}">
-      Probando la directiva ngClass mediante object
+    <p ng-class="[style1, style2, style3]">
+      Probando la directiva ngClass mediante Array.
     </p>
 
     <script src="libs/angular.js"></script>

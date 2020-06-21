@@ -2,22 +2,16 @@
 <html lang="en" dir="ltr" ng-app="myApp" ng-strict-di>
   <head>
     <meta charset="utf-8">
-    <title>Usando ngBind</title>
+    <title>Usando ngBindHtml</title>
     <link rel="stylesheet" type:="text/css" href="assets/app.css">
   </head>
   <body ng-controller="UsuarioController">
+    <!---->
 
-  <!--
-      la dirctiva ng-bind: Es preferible usar la directiva ngBind en lugar de la expresion
-      {{expresion}}
-  -->
-
-    <label>Mi nombre es: <input type="text" ng-model="name">
-    </label>
-
-    <br>3.- Hola, <span class="ng-bind: name;"></span>!
+    <p ng-bind-html="myHTML"></p>
 
     <script src="libs/angular.js"></script>
+    <script src="libs/angular-sanitize.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers/usuario.controller.js"></script>
   </body>
